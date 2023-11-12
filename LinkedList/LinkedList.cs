@@ -207,6 +207,8 @@ public class LinkedList
 
     public int getKthFromTheEnd(int k)
     {
+        //[10  20  30  40  50]
+        // *      *
 
         if(First is null)
             throw new NullReferenceException();
