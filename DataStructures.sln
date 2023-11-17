@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Array", "Array\Array.csproj", "{0910DFFF-F407-4507-8712-9DCBCFB60C28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{9F13DB75-601C-4E34-AA4B-92FB15A435E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedList", "LinkedList\LinkedList.csproj", "{9F13DB75-601C-4E34-AA4B-92FB15A435E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "Stack\Stack.csproj", "{FC1AD626-8014-4A19-9966-5055075096E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9F13DB75-601C-4E34-AA4B-92FB15A435E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F13DB75-601C-4E34-AA4B-92FB15A435E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F13DB75-601C-4E34-AA4B-92FB15A435E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC1AD626-8014-4A19-9966-5055075096E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC1AD626-8014-4A19-9966-5055075096E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC1AD626-8014-4A19-9966-5055075096E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC1AD626-8014-4A19-9966-5055075096E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

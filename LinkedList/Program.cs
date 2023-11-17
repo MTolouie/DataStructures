@@ -8,7 +8,7 @@ linkedList.addFirst(20);
 linkedList.addFirst(10);
 
 //linkedList.reverse();
-var result = linkedList.getKthFromTheEnd(10);
+var result = linkedList.getKthFromTheEnd(1);
 
 linkedList.print();
 
