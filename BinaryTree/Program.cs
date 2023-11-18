@@ -11,8 +11,22 @@ tree.insert(10);
 
 BTreePrinter.Print(tree.Root);
 
-var result = tree.find(100);
-Console.WriteLine(result);
+Console.WriteLine("");
+Console.WriteLine("");
+Console.WriteLine("");
+
+tree.printKthNode(1);
+
+
+//var result = tree.find(100);
+
+//tree.traversePreOrder(tree.Root);
+//var result = tree.min();
+
+//var isEqual = tree.equal(secondTree);
+
+//var result = tree.isBinarySearchTree();
+//Console.WriteLine(result);
 
 //Console.WriteLine(tree.ToString());
 
