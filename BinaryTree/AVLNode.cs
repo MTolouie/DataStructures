@@ -1,13 +1,14 @@
 ﻿
 namespace BinaryTree;
 
-public class Node
+public class AVLNode
 {
     public int Value { get; set; }
-    public Node LeftChild { get; set; }
-    public Node RightChild { get; set; }
+    public AVLNode LeftChild{ get; set; }
+    public AVLNode RightChild { get; set; }
+    public int Height { get; set; }
 
-    public Node(int value)
+    public AVLNode(int value)
     {
         this.Value = value;
     }
