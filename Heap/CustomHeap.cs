@@ -17,14 +17,49 @@ public class CustomHeap
         bubbleUp();
     }
 
-    public void remove()
+    public int remove()
     {
-        if(isEmpty())
+        if (isEmpty())
             throw new NullReferenceException();
 
-        Items[0] = Items[--Size];
 
         // if The New Root is Smaller Than Its Children We Have To Implement Bubble Down
+        var root = Items[0];
+        Items[0] = Items[--Size];
+        bubbleDown();
+
+        return root;
+
+    }
+
+    public void heapify()
+    {
+        for (int i = Items.Length / 2 - 1; i >= 0; i--)
+            heapify(i);
+    }
+    private void heapify(int index)
+    {
+        int largerIndex = index;
+
+        if (Items[findLeftChildIndex(index)] > Items[largerIndex]
+            && findLeftChildIndex(index) <= Items.Length)
+            largerIndex = findLeftChildIndex(index);
+
+        if (Items[findRightChildIndex(index)] > Items[largerIndex]
+            && findRightChildIndex(index) < Items.Length)
+            largerIndex = findRightChildIndex(index);
+
+        if (index == largerIndex)
+            return;
+
+        swap(index,largerIndex);
+        heapify(largerIndex);
+
+    }
+
+
+    private void bubbleDown()
+    {
 
         int index = 0;
 
@@ -34,7 +69,6 @@ public class CustomHeap
             swap(index, largerChildIndex);
             index = largerChildIndex;
         }
-
     }
     private void bubbleUp()
     {
@@ -48,6 +82,12 @@ public class CustomHeap
 
     private int getLargerChildIndex(int index)
     {
+        if (!hasLeftChild(index))
+            return index;
+
+        if (!hasRightChild(index))
+            return findLeftChildIndex(index);
+
         return Items[findLeftChildIndex(index)] > Items[findRightChildIndex(index)]
                ? findLeftChildIndex(index)
                : findRightChildIndex(index);
@@ -55,8 +95,24 @@ public class CustomHeap
 
     private bool isValidParent(int index)
     {
+        if (!hasLeftChild(index))
+            return true;
+
+        if (!hasRightChild(index))
+            return Items[index] >= findLeftChildIndex(index);
+
         return Items[index] >= Items[findLeftChildIndex(index)] &&
                Items[index] >= Items[findRightChildIndex(index)];
+    }
+
+    private bool hasLeftChild(int index)
+    {
+        return findLeftChildIndex(index) <= Size;
+    }
+
+    private bool hasRightChild(int index)
+    {
+        return findRightChildIndex(index) <= Size;
     }
 
     private int findParentIndex(int index)
